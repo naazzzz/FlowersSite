@@ -4,13 +4,13 @@
                 <span class="long_dash"></span>
                 <table>
                     <tbody>
-                <td class="price"><img src = "/FlowersSite/img/buket-1.jpeg">
-                    <p>Букет "Джумилия"</p>
-                    <p class="price-flow">1 900 руб./шт</p>
-                </td>
-                <td class="price"><img src = "/FlowersSite/img/buket-2.jpg">
-                    <p>Букет «Классика»</p>
-                    <p class="price-flow">1 950 руб./шт</p></td>
+                    <?php foreach ($flowersInfo as $oneflower):  ?>
+                        <td class="price"><img src = "<?=$oneflower['img'];?>">
+                            <p><?=$oneflower['name'];?><br>Количество:<?=$oneflower['amount'];?></p>
+                            <p class="price-flow"><?=$oneflower['price'];?> руб./шт</p><br>
+                            <button onclick="document.location='index.php?route=product&id=<?=$oneflower['id'];?>&table=buket'" class="custom-btn first-button cst-btn">Подробнее</button>
+                        </td>
+                    <?php endforeach; ?>
                 </tbody>
                 </table>
         </div>
