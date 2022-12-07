@@ -4,7 +4,7 @@
             </div>
             <div class="text-first-img">
                 <h1>Все Для Вашего Сада и Дома
-                    <a href="#" class="custom-btn first-button"><span>Каталог</span></a>
+                    <a href="#" class="custom-btn first-button main-page-button"><span>Каталог</span></a>
                 </h1>
             </div>
         </div>
