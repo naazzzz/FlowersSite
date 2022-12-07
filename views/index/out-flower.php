@@ -3,14 +3,14 @@
                 <span class="long_dash"></span>
                 <table>
                     <tbody>
-                <td class="price"><img src = "/FlowersSite/img/out-flow-1.jpg">
-                    <p>Айва st (Размер: С4;<br>
-                         Сорт: Fire Dance)</p>
-                    <p class="price-flow">1 250 руб./шт</p>
-                </td>
-                <td class="price"><img src = "/FlowersSite/img/out-flow-2.jpg">
-                    <p>Актинидия st (Размер: 14;<br> Высота: 60; Сорт: Kolomikta)</p>
-                    <p class="price-flow">490 руб./шт</p></td>
+                    <?php foreach ($flowersInfo as $oneflower):  ?>
+                        <td class="price"><img src = "<?=$oneflower['img'];?>">
+                            <p><?=$oneflower['name'];?>(Размер:<?=$oneflower['size'];?>;<br>
+                                Высота:<?=$oneflower['high'];?>;Сорт:<?=$oneflower['sort'];?>)</p>
+                            <p class="price-flow"><?=$oneflower['price'];?> руб./шт</p>
+                            <button onclick="document.location='index.php?route=product&id=<?=$oneflower['id'];?>&table=outflower'" class="custom-btn first-button cst-btn">Подробнее</button>
+                        </td>
+                    <?php endforeach; ?>
                 </tbody>
                 </table>
         </div>

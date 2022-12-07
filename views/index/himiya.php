@@ -4,13 +4,13 @@
                 <span class="long_dash"></span>
                 <table>
                     <tbody>
-                <td class="price"><img src = "/FlowersSite/img/himiya.jpg">
-                    <p>Абига Пик 50 мл. Удобрение фунгицид, средство для защиты садовых растений от болезней</p>
-                    <p class="price-flow"></p>120 руб./шт</p>
-                </td>
-                <td class="price"><img src = "/FlowersSite/img/himiya-2.jpg">
-                    <p>Агран 50мл</p>
-                    <p class="price-flow">295 руб./шт</p></td>
+                    <?php foreach ($flowersInfo as $oneflower):  ?>
+                        <td class="price"><img src = "<?=$oneflower['img'];?>">
+                            <p><?=$oneflower['name'];?><br>Объём:<?=$oneflower['size'];?></p>
+                            <p class="price-flow"><?=$oneflower['price'];?> руб./шт</p>
+                            <button onclick="document.location='index.php?route=product&id=<?=$oneflower['id'];?>&table=himiya'" class="custom-btn first-button cst-btn">Подробнее</button>
+                        </td>
+                    <?php endforeach; ?>
                 </tbody>
                 </table>
         </div>
