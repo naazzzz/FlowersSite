@@ -5,9 +5,10 @@
                 <table>
                     <tbody>
                     <?php foreach ($flowersInfo as $oneflower):  ?>
-                        <td class="price"><img src = "<?=$oneflower['img'];?>">
-                            <p><?=$oneflower['name'];?><br>Количество:<?=$oneflower['amount'];?></p>
-                            <p class="price-flow"><?=$oneflower['price'];?> руб./шт</p><br>
+                        <td class="price"><img src = "/FlowersSite/img/<?=$oneflower['img'];?>">
+                            <p><?=$oneflower['name'];?><br>
+                                <?=$oneflower['description'];?></p>
+                            <p class="price-flow"><?=$oneflower['price'];?> руб./шт</p>
                             <button onclick="document.location='index.php?route=product&id=<?=$oneflower['id'];?>&table=buket'" class="custom-btn first-button cst-btn">Подробнее</button>
                         </td>
                     <?php endforeach; ?>
