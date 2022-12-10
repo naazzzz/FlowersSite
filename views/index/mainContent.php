@@ -11,10 +11,10 @@
         <div class="flow">
             <div class = "next-main">
                 <div class = "flowers">
-                    <a href="home-flower.php"><img src="/FlowersSite/img/home-flower.png"></a>
+                    <a href="homeFlower.php"><img src="/FlowersSite/img/home-flower.png"></a>
                 </div>
                 <div class = "flowers">
-                    <a href="out-flower.php"><img src="/FlowersSite/img/n-flower.png"></a>
+                    <a href="outFlower.php"><img src="/FlowersSite/img/n-flower.png"></a>
                 </div>
                 <div class = "flowers">
                     <a href="buket.php"><img src="/FlowersSite/img/buket.png"></a>
@@ -31,10 +31,10 @@
             </div>
             <div class="names-flowers">
                 <div class = "names">
-                    <a href="home-flower.php">Комнатные растения</a>
+                    <a href="homeFlower.php">Комнатные растения</a>
                 </div>
                 <div class = "names">
-                    <a href="out-flower.php">Уличные растения</a>
+                    <a href="outFlower.php">Уличные растения</a>
                 </div>
                 <div class = "names">
                     <a href="buket.php">Букеты</a>
