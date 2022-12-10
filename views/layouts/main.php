@@ -18,12 +18,12 @@
                   <ul>
                       <li><a href="index.php">Главная страница</a>
                       <li><h2>Каталог<img src = "/FlowersSite/img/flower-white.svg" alt=""></h2>
-                      <li><a href="index.php?route=homeFlower">Комнатные растения</a>
-                      <li><a href="index.php?route=outFlower">Уличные растения</a>
-                      <li><a href="index.php?route=buket">Букеты</a>
-                      <li><a href="index.php?route=grunt">Грунты</a>
-                      <li><a href="index.php?route=himiya">Химия и удобрения</a>
-                      <li><a href="index.php?route=gorshki">Горшки и капшо</a>
+                      <li><a href="index.php?route=catalog&category=homeFlower">Комнатные растения</a>
+                      <li><a href="index.php?route=catalog&category=outFlower">Уличные растения</a>
+                      <li><a href="index.php?route=catalog&category=buket">Букеты</a>
+                      <li><a href="index.php?route=catalog&category=grunt">Грунты</a>
+                      <li><a href="index.php?route=catalog&category=himiya">Химия и удобрения</a>
+                      <li><a href="index.php?route=catalog&category=gorshki">Горшки и капшо</a>
                           <h2>О Нас<img src = "/FlowersSite/img/flower-white.svg"></h2>
                       <li><a href="index.php?route=about">О фирме</a>
                       <li><a href="index.php?route=aboutAuthor">Об авторе</a>
