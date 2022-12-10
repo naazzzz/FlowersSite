@@ -7,105 +7,37 @@ Class Controller_Index Extends Controller_Base {
 	
 	// экшен
 	function index() {
-		$this->template->view('main-content');
+		$this->template->view('mainContent');
 	}
 
     function product() {
        $id =$_GET["id"];
        $product=$_GET["table"];
         $select = array(
-            'where' => 'id = '.$id, // условие
+            'where' => 'id = '.$id,'category =  '."'".$product."'" // условие
         );
-        switch ($product){
-            case "homeflower":
-                $model = new Model_Homeflower($select); // создаем объект модели
-                break;
-            case "outflower":
-                $model = new Model_Outflower($select); // создаем объект модели
-                break;
-            case "himiya":
-                $model = new Model_Himiya($select); // создаем объект модели
-                break;
-            case "grunt":
-                $model = new Model_Grunt($select); // создаем объект модели
-                break;
-            case "gorshki":
-                $model = new Model_Gorshki($select); // создаем объект модели
-                break;
-            case "buket":
-                $model = new Model_Buket($select); // создаем объект модели
-                break;
-        }
+        $model = new model_product($select); // создаем объект модели
 
         $flowersInfo = $model->getAllRows(); // получаем все строки
         $this->template->vars('flowersInfo', $flowersInfo);
         $this->template->view('product');
     }
 
-    function homeFlower(){
+    function catalog(){
+        $category=$_GET["category"];
         $select = array(
-            'where' => 'id >= 1', // условие
+            'where' => 'category =  '."'".$category."'" // условие
         );
-        $model = new Model_Homeflower($select); // создаем объект модели
-        $flowersInfo = $model->getAllRows(); // получаем все строки
+        $model = new model_product($select); // создаем объект модели
+        $flowersInfo = $model->getAllRows(); // получаем все строки;
         $this->template->vars('flowersInfo', $flowersInfo);
-        $this->template->view('home-flower');
-
-    }
-
-    function outFlower(){
-        $select = array(
-            'where' => 'id >= 1', // условие
-        );
-        $model = new Model_Outflower($select); // создаем объект модели
-        $flowersInfo = $model->getAllRows(); // получаем все строки
-        $this->template->vars('flowersInfo', $flowersInfo);
-        $this->template->view('out-flower');
-    }
-
-    function buket(){
-        $select = array(
-            'where' => 'id >= 1', // условие
-        );
-        $model = new Model_Buket($select); // создаем объект модели
-        $flowersInfo = $model->getAllRows(); // получаем все строки
-        $this->template->vars('flowersInfo', $flowersInfo);
-        $this->template->view('buket');
-    }
-
-    function grunt(){
-        $select = array(
-            'where' => 'id >= 1', // условие
-        );
-        $model = new Model_Grunt($select); // создаем объект модели
-        $flowersInfo = $model->getAllRows(); // получаем все строки
-        $this->template->vars('flowersInfo', $flowersInfo);
-        $this->template->view('grunt');
-    }
-
-    function himiya(){
-        $select = array(
-            'where' => 'id >= 1', // условие
-        );
-        $model = new Model_Himiya($select); // создаем объект модели
-        $flowersInfo = $model->getAllRows(); // получаем все строки
-        $this->template->vars('flowersInfo', $flowersInfo);
-        $this->template->view('himiya');
-    }
-    function gorshki(){
-        $select = array(
-            'where' => 'id >= 1', // условие
-        );
-        $model = new Model_Gorshki($select); // создаем объект модели
-        $flowersInfo = $model->getAllRows(); // получаем все строки
-        $this->template->vars('flowersInfo', $flowersInfo);
-        $this->template->view('gorshki');
+        $this->template->view($category);
     }
     function about(){
         $this->template->view('about');
     }
     function aboutAuthor(){
-        $this->template->view('about-author');
+        $this->template->view('aboutAuthor');
     }
 
 
