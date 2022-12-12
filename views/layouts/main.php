@@ -3,7 +3,7 @@
   <title>FloWers</title>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="/FlowersSite/css/styles.css">
+    <link rel="stylesheet" href="css/Style.css">
     </head>
     <body>
       <nav class="header">
