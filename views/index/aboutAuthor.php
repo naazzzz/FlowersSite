@@ -1,5 +1,3 @@
-<div class="name-main about_info_wrap">
-                <h3>О авторе</h3>
-                <span class="long_dash"></span>
-                <p>Автор- просто гениальный специалист, который устал заниматься версткой этого магазина, проявите сочувствие и поддержу и переведите по номеру указанному ВЕЗДЕ денюжку на энергос, спасибо огромное.</p>
-        </div>
+<?php foreach ($contentInfo as $onecont):  ?>
+    <?=htmlspecialchars_decode($onecont['aboutAuthor']);?>
+<?php endforeach; ?>
