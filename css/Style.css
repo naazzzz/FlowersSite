@@ -436,6 +436,13 @@ height: 100px;
   .social-icons a:hover {
     background-color: #e0e0e0;
   }
+  .table{
+      width: 150px;
+  }
+  .modernName p{
+      display: inline-block;
+      margin-left: 90px;
+  }
   .social-icons a::before {
     content: "";
     position: absolute;
@@ -526,6 +533,9 @@ display: inline-block;
 }
 .text-first-img{
     margin-left: 100px;
+}
+.modern{
+    margin-left: 200px;
 }
 
 .custom-btn {
