@@ -196,7 +196,7 @@ Abstract Class Model_Base
         foreach($arrayAllFields as $field){
             if(!empty($this->$field)){
                 if(strtoupper($field) != 'ID'){
-                    $arrayForSet[] = $field . ' = "' . $this->$field . '"';
+                    $arrayForSet[] = $field . ' = "'. $this->$field.'"';
                 }else{
                     $whereID = $this->$field;
                 }
