@@ -7,7 +7,7 @@ Class Controller_Index Extends Controller_Base {
 	
 	// экшен
 	function index() {
-		$this->template->view('mainContent');
+        $this->template->view('mainContent');
 	}
 
     function product() {
@@ -39,8 +39,29 @@ Class Controller_Index Extends Controller_Base {
     function aboutAuthor(){
         $this->template->view('aboutAuthor');
     }
+    function moderationAuth(){
+            $this->template->view('moderationAuth');
+    }
+    function moderation(){
+        if ($_POST["pass"] == 1234) {
+            $select = array(
+                'where' => 'id >=1 ' // условие
+            );
+            $model = new model_content($select); // создаем объект модели
+            $contentInfo = $model->getAllRows(); // получаем все строки;
+            $this->template->vars('contentInfo', $contentInfo);
 
-
+            $model = new model_product($select); // создаем объект модели
+            $flowersInfo = $model->getAllRows(); // получаем все строки;
+            $this->template->vars('flowersInfo', $flowersInfo);
+            $this->template->view('moderation');
+        }
+    }
+    function moderationSendRequest(){
+        if($_POST["pass"] == 1234){
+        $this->template->view('moderation');
+        }
+    }
 
 
 }
